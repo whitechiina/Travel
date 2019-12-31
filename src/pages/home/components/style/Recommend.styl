@@ -1,0 +1,37 @@
+@import '~styles/mixins.styl'
+
+.title
+    margin-top .2rem
+    line-height .8rem
+    background #eee
+    text-indent .2rem
+.item
+    overflow hidden
+    display flex
+    height 1.9rem
+    .item-img
+        width 1.7rem
+        height 1.7rem
+        padding .1rem
+    .item-info
+        flex 1
+        padding .1rem
+        // 主要要为父添加100%;那么就不会超出父容器。 但是flex为1的 设置百分100无效 然而用这个min-width:0 其实也就是width为>0 可以间接这么理解 然后确定了width 避免溢出
+        min-width:0
+        .item-title
+            line-height .54rem
+            font-size .32rem
+            ellipsis()
+        .item-desc
+            line-height .4rem
+            color #ccc
+            background: #fff9f9
+            ellipsis()
+        .item-btn
+            display block
+            line-height .44rem
+            margin-top:.16rem
+            background #ff9300
+            padding  0 .2rem
+            border-radius .06rem
+            color #fff
